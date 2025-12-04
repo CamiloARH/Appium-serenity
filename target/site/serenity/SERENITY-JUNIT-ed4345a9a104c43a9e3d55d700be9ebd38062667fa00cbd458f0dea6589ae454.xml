@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Navegación Web Mobile" skipped="0" tests="1" time="30.79" timestamp="2025-12-04 01:29:22"><testcase name="Navegar en Serebii desde Chrome Mobile"><error message="Could not instantiate class io.appium.java_client.AppiumDriver" type="net.thucydides.core.webdriver.DriverConfigurationError">Could not instantiate class io.appium.java_client.AppiumDriver</error><system-err>Could not instantiate class io.appium.java_client.AppiumDriver&#13;
+co.com.pragma.tasks.NavigateTo.performAs(NavigateTo.java:19)&#13;
+co.com.pragma.stepdefinitions.MobileSteps.navigateSerebii(MobileSteps.java:39)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase></testsuite>
