@@ -52,9 +52,8 @@ dependencies {
     testImplementation "io.cucumber:cucumber-junit-platform-engine:${cucumberJunitPlatformVersion}"
 
     // --- APPIUM CLIENT ---
-    implementation("io.appium:java-client:${appiumVersion}") {
-        exclude group: 'org.seleniumhq.selenium'
-    }
+// --- APPIUM CLIENT ---
+    implementation "io.appium:java-client:${appiumVersion}"
 
     // --- UTILIDADES ---
     implementation "ch.qos.logback:logback-classic:${logbackVersion}"
