@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Interacción Play Store" skipped="0" tests="1" time="15.9" timestamp="2025-12-05 11:48:43"><testcase name="Descargar Waze"><failure message="&#13;&#10;Expected: an element that is visible&#13;&#10;     but: no matching element found by [Caja de Búsqueda (Home) located with: Appiumid: com.google.android.finsky:id/search_bar_hint]" type="java.lang.AssertionError">&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Interacción Play Store" skipped="0" tests="1" time="15.6" timestamp="2025-12-05 01:43:31"><testcase name="Descargar Waze"><failure message="&#13;&#10;Expected: an element that is visible&#13;&#10;     but: no matching element found by [Caja de Búsqueda (Home) located with: Appiumid: com.google.android.finsky:id/search_bar_hint]" type="java.lang.AssertionError">&#13;
 Expected: an element that is visible&#13;
      but: no matching element found by [Caja de Búsqueda (Home) located with: Appiumid: com.google.android.finsky:id/search_bar_hint]</failure><system-err>&#13;
 Expected: an element that is visible&#13;

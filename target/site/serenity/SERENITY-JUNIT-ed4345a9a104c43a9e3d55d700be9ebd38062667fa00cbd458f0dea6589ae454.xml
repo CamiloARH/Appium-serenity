@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Navegación Web Mobile" skipped="0" tests="1" time="26.96" timestamp="2025-12-05 11:49:00"><testcase name="Navegar en Serebii desde Chrome Mobile"><failure message="Expected validate site&#13;&#10;Expected: is &lt;true&gt;&#13;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Expected validate site&#13;
-Expected: is &lt;true&gt;&#13;
-     but: was &lt;false&gt;</failure><system-err>Expected validate site&#13;
-Expected: is &lt;true&gt;&#13;
-     but: was &lt;false&gt;&#13;
-co.com.pragma.stepdefinitions.MobileSteps.verifySerebii(MobileSteps.java:44)&#13;
-io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
-io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
-io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;
-io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)&#13;
-io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)&#13;
-io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
-io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)&#13;
-io.cucumber.core.runner.TestStep.run(TestStep.java:56)&#13;
-io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)&#13;
-io.cucumber.core.runner.TestCase.run(TestCase.java:84)&#13;
-io.cucumber.core.runner.Runner.runPickle(Runner.java:75)&#13;
-io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)&#13;
-io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)&#13;
-io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)&#13;
-io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)&#13;
-io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)&#13;
-worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
-worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Navegación Web Mobile" skipped="0" tests="1" time="6.21" timestamp="2025-12-05 01:53:50"><testcase name="Navegar en Serebii desde Chrome Mobile"><error message="Could not start a new session. Response code 500. Message: No Chromedriver found that can automate Chrome '134.0.6998'. You could also try to enable automated chromedrivers download as a possible workaround. &#10;Host info: host: 'CAMILO-RODRIGUE', ip: '192.168.1.5'&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'&#10;Driver info: io.appium.java_client.AppiumDriver&#10;Command: [null, newSession {capabilities=[{appium:chromedriverAutodownload=true, appium:automationName=UiAutomator2, browserName=Chrome, appium:deviceName=emulator-5554, platformName=ANDROID}], desiredCapabilities=Capabilities {appium:chromedriverAutodownload: true, automationName: UiAutomator2, browserName: Chrome, deviceName: emulator-5554, platformName: ANDROID}}]&#10;Capabilities {appium:chromedriverAutodownload: true, automationName: UiAutomator2, browserName: Chrome, deviceName: emulator-5554, platformName: ANDROID}" type="org.openqa.selenium.SessionNotCreatedException">Could not start a new session. Response code 500. Message: No Chromedriver found that can automate Chrome '134.0.6998'. You could also try to enable automated chromedrivers download as a possible workaround. 
+Host info: host: 'CAMILO-RODRIGUE', ip: '192.168.1.5'
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.AppiumDriver
+Command: [null, newSession {capabilities=[{appium:chromedriverAutodownload=true, appium:automationName=UiAutomator2, browserName=Chrome, appium:deviceName=emulator-5554, platformName=ANDROID}], desiredCapabilities=Capabilities {appium:chromedriverAutodownload: true, automationName: UiAutomator2, browserName: Chrome, deviceName: emulator-5554, platformName: ANDROID}}]
+Capabilities {appium:chromedriverAutodownload: true, automationName: UiAutomator2, browserName: Chrome, deviceName: emulator-5554, platformName: ANDROID}</error><system-err>Could not start a new session. Response code 500. Message: No Chromedriver found that can automate Chrome '134.0.6998'. You could also try to enable automated chromedrivers download as a possible workaround. 
+Host info: host: 'CAMILO-RODRIGUE', ip: '192.168.1.5'
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: io.appium.java_client.AppiumDriver
+Command: [null, newSession {capabilities=[{appium:chromedriverAutodownload=true, appium:automationName=UiAutomator2, browserName=Chrome, appium:deviceName=emulator-5554, platformName=ANDROID}], desiredCapabilities=Capabilities {appium:chromedriverAutodownload: true, automationName: UiAutomator2, browserName: Chrome, deviceName: emulator-5554, platformName: ANDROID}}]
+Capabilities {appium:chromedriverAutodownload: true, automationName: UiAutomator2, browserName: Chrome, deviceName: emulator-5554, platformName: ANDROID}&#13;
+io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:133)&#13;
+io.appium.java_client.remote.AppiumProtocolHandshake.createSession(AppiumProtocolHandshake.java:102)&#13;
+io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:176)&#13;
+io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:237)&#13;
+io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:268)&#13;
+io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:90)&#13;
+io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:102)&#13;
+co.com.pragma.tasks.NavigateTo.performAs(NavigateTo.java:41)&#13;
+co.com.pragma.stepdefinitions.MobileSteps.navigateSerebii(MobileSteps.java:39)&#13;
+✽.ingresa a la pagina de serebii(classpath:features/serebii.feature:6)&#13;
 </system-err></testcase></testsuite>
