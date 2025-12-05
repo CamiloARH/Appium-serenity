@@ -21,40 +21,43 @@ sourceCompatibility = 17
 targetCompatibility = 17
 
 ext {
-    serenityCoreVersion = '4.2.16'
+    serenityVersion = '4.2.16'
     junitVersion = '5.10.2'
-    appiumVersion = '9.3.0'
+    // appiumVersion = '9.3.0' // YA NO LA NECESITAMOS, la gestiona Serenity
     logbackVersion = '1.4.14'
     lombokVersion = '1.18.32'
 }
 
 dependencies {
-    // Serenity BDD Core & Screenplay
-    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}"
-    implementation "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}"
-    implementation "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}"
-    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}"
-    implementation "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}"
-    implementation "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}"
 
-    // Appium Java Client (W3C Compliant)
-    implementation "io.appium:java-client:${appiumVersion}"
+    // --- SERENITY CORE (PARA EL CÓDIGO PRINCIPAL) ---
+    implementation "net.serenity-bdd:serenity-core:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
+    implementation "net.serenity-bdd:serenity-ensure:${serenityVersion}"
+
+    // --- SERENITY PARA LOS TESTS (JUNIT 4 + CUCUMBER) ---
+    testImplementation "net.serenity-bdd:serenity-junit:${serenityVersion}"
+    testImplementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
+
+    // --- JUNIT 4 (OBLIGATORIO PARA @RunWith) ---
+    testImplementation "junit:junit:4.13.2"
+
+    // --- APPIUM (SIN PELEAR CON SELENIUM) ---
+    testImplementation("io.appium:java-client:9.3.0") {
+        exclude group: 'org.seleniumhq.selenium'
+    }
 
     // Logging
     implementation "ch.qos.logback:logback-classic:${logbackVersion}"
 
-    // Lombok (Boilerplate reduction)
+    // Lombok
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
-
-    // Testing Engine
-    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
-    testImplementation "org.junit.vintage:junit-vintage-engine:${junitVersion}" // Compatibilidad opcional
 }
 
+
 test {
-    useJUnitPlatform()
     testLogging {
         events "passed", "skipped", "failed"
     }
@@ -62,5 +65,4 @@ test {
 }
 
 gradle.startParameter.continueOnFailure = true
-
 test.finalizedBy(aggregate)
