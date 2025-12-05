@@ -9,7 +9,7 @@ buildscript {
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
-        classpath "net.serenity-bdd:serenity-gradle-plugin:4.2.16"
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.30" // Alineado a la versión del core
     }
 }
 
@@ -21,47 +21,60 @@ sourceCompatibility = 17
 targetCompatibility = 17
 
 ext {
-    serenityVersion = '4.2.16'
-    junitVersion = '5.10.2'
-    // appiumVersion = '9.3.0' // YA NO LA NECESITAMOS, la gestiona Serenity
+    serenityVersion = '4.0.30'
+    junitVersion = '5.10.2'          // Para Jupiter API y Engine
+    junitPlatformVersion = '1.10.2'  // <--- NUEVA VARIABLE (Versión correcta para Suite)
+    appiumVersion = '9.1.0'
     logbackVersion = '1.4.14'
     lombokVersion = '1.18.32'
+    cucumberJunitPlatformVersion = '7.15.0'
 }
 
 dependencies {
 
-    // --- SERENITY CORE (PARA EL CÓDIGO PRINCIPAL) ---
+    // --- SERENITY CORE & SCREENPLAY ---
     implementation "net.serenity-bdd:serenity-core:${serenityVersion}"
     implementation "net.serenity-bdd:serenity-screenplay:${serenityVersion}"
     implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityVersion}"
     implementation "net.serenity-bdd:serenity-ensure:${serenityVersion}"
 
-    // --- SERENITY PARA LOS TESTS (JUNIT 4 + CUCUMBER) ---
-    testImplementation "net.serenity-bdd:serenity-junit:${serenityVersion}"
+    // --- SERENITY CUCUMBER ---
     testImplementation "net.serenity-bdd:serenity-cucumber:${serenityVersion}"
 
-    // --- JUNIT 4 (OBLIGATORIO PARA @RunWith) ---
-    testImplementation "junit:junit:4.13.2"
+    // --- JUNIT 5 (JUPITER) ---
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 
-    // --- APPIUM (SIN PELEAR CON SELENIUM) ---
-    testImplementation("io.appium:java-client:9.3.0") {
+    // --- AQUÍ ESTABA EL ERROR: Usamos la versión 1.x ---
+    testImplementation "org.junit.platform:junit-platform-suite:${junitPlatformVersion}"
+
+    // --- CUCUMBER ENGINE ---
+    testImplementation "io.cucumber:cucumber-junit-platform-engine:${cucumberJunitPlatformVersion}"
+
+    // --- APPIUM CLIENT ---
+    implementation("io.appium:java-client:${appiumVersion}") {
         exclude group: 'org.seleniumhq.selenium'
     }
 
-    // Logging
+    // --- UTILIDADES ---
     implementation "ch.qos.logback:logback-classic:${logbackVersion}"
 
-    // Lombok
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 }
 
-
 test {
+    // Habilita el motor de JUnit 5
+    useJUnitPlatform()
+
+    // Pasa las variables (-Denvironment=local_web) a Serenity
+    systemProperties System.getProperties()
+
     testLogging {
+        showStandardStreams = true
         events "passed", "skipped", "failed"
     }
-    systemProperties System.getProperties()
 }
 
 gradle.startParameter.continueOnFailure = true

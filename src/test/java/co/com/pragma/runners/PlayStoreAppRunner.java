@@ -1,14 +1,17 @@
 package co.com.pragma.runners;
 
-import io.cucumber.junit.CucumberOptions;
-import net.serenitybdd.cucumber.CucumberWithSerenity;
-import org.junit.runner.RunWith;
+import org.junit.platform.suite.api.ConfigurationParameter;
+import org.junit.platform.suite.api.IncludeEngines;
+import org.junit.platform.suite.api.IncludeTags;
+import org.junit.platform.suite.api.SelectClasspathResource;
+import org.junit.platform.suite.api.Suite;
 
-@RunWith(CucumberWithSerenity.class)
-@CucumberOptions(
-        features = "src/test/resources/features/playstore.feature",
-        glue = "co.com.pragma.stepdefinitions",
-        snippets = CucumberOptions.SnippetType.CAMELCASE,
-        tags = "@AppStore"
-)
-public class PlayStoreAppRunner {}
+import static io.cucumber.junit.platform.engine.Constants.GLUE_PROPERTY_NAME;
+
+@Suite
+@IncludeEngines("cucumber") // Activa el motor de Cucumber
+@SelectClasspathResource("/features/playstore.feature") // Ruta al archivo feature específico
+@IncludeTags("AppStore") // Reemplaza a tags = "@AppStore"
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "co.com.pragma.stepdefinitions") // Reemplaza a glue
+public class PlayStoreAppRunner {
+}

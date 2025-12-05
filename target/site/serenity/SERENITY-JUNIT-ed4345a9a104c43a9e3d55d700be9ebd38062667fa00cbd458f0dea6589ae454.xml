@@ -1,17 +1,25 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Navegación Web Mobile" skipped="0" tests="1" time="31.12" timestamp="2025-12-05 08:22:15"><testcase name="Navegar en Serebii desde Chrome Mobile"><error message="After several attempts, could not instantiate new WebDriver instance of type class io.appium.java_client.AppiumDriver (Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. &#10;Host info: host: 'CAMILO-RODRIGUE', ip: '192.168.1.5'&#10;Build info: version: '4.28.1', revision: '73f5ad48a2'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'&#10;Driver info: io.appium.java_client.android.AndroidDriver&#10;Command: [null, newSession {capabilities=[Capabilities {browserName: chromium, chromedriverAutodownload: true, hub: http://127.0.0.1:4723, platformName: ANDROID}]}]&#10;Capabilities {browserName: chromium, chromedriverAutodownload: true, hub: http://127.0.0.1:4723, platformName: ANDROID}). See below for more details." type="net.thucydides.core.webdriver.DriverConfigurationError">After several attempts, could not instantiate new WebDriver instance of type class io.appium.java_client.AppiumDriver (Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'CAMILO-RODRIGUE', ip: '192.168.1.5'
-Build info: version: '4.28.1', revision: '73f5ad48a2'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chromium, chromedriverAutodownload: true, hub: http://127.0.0.1:4723, platformName: ANDROID}]}]
-Capabilities {browserName: chromium, chromedriverAutodownload: true, hub: http://127.0.0.1:4723, platformName: ANDROID}). See below for more details.</error><system-err>After several attempts, could not instantiate new WebDriver instance of type class io.appium.java_client.AppiumDriver (Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
-Host info: host: 'CAMILO-RODRIGUE', ip: '192.168.1.5'
-Build info: version: '4.28.1', revision: '73f5ad48a2'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[Capabilities {browserName: chromium, chromedriverAutodownload: true, hub: http://127.0.0.1:4723, platformName: ANDROID}]}]
-Capabilities {browserName: chromium, chromedriverAutodownload: true, hub: http://127.0.0.1:4723, platformName: ANDROID}). See below for more details.&#13;
-co.com.pragma.stepdefinitions.MobileSteps.prepareWeb(MobileSteps.java:32)&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Navegación Web Mobile" skipped="0" tests="1" time="26.96" timestamp="2025-12-05 11:49:00"><testcase name="Navegar en Serebii desde Chrome Mobile"><failure message="Expected validate site&#13;&#10;Expected: is &lt;true&gt;&#13;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Expected validate site&#13;
+Expected: is &lt;true&gt;&#13;
+     but: was &lt;false&gt;</failure><system-err>Expected validate site&#13;
+Expected: is &lt;true&gt;&#13;
+     but: was &lt;false&gt;&#13;
+co.com.pragma.stepdefinitions.MobileSteps.verifySerebii(MobileSteps.java:44)&#13;
+io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
+io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
+io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)&#13;
+io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)&#13;
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)&#13;
+io.cucumber.core.runner.TestStep.run(TestStep.java:56)&#13;
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)&#13;
+io.cucumber.core.runner.TestCase.run(TestCase.java:84)&#13;
+io.cucumber.core.runner.Runner.runPickle(Runner.java:75)&#13;
+io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)&#13;
+io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)&#13;
+io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
 </system-err></testcase></testsuite>

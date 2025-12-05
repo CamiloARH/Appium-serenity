@@ -1,16 +1,17 @@
 target/
+.gradle/
+out/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 .kotlin
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+.idea/
 *.iws
 *.iml
+.vscode/
+*.swp
 *.ipr
 
 ### Eclipse ###
@@ -40,3 +41,13 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# --- Reportes de Pruebas (Serenity/Appium) ---
+test-output/
+serenity-history/
+# A veces Serenity genera reportes en la raíz o dentro de target
+site/
+
+# --- Logs ---
+*.log
+appium.log
