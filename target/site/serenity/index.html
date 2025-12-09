@@ -27,14 +27,14 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
 <!-- JQuery -->
-<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<script type="text/javascript" src="scripts/jquery-3.7.1.min.js"></script><!-- Required Stylesheets -->
 <link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
 
 <!-- Required Javascript -->
 <script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+<link type="text/css" href="datatables/2.3.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/2.3.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/2.3.1/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -72,11 +72,11 @@
     Chart.register(ChartDataLabels);
 </script>
 <!-- JQuery-UI -->
-<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
-<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
-<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
-<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
-<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+<link type="text/css" href="jquery-ui-1.14.1/jquery-ui.css" rel="Stylesheet" />
+<script type="text/javascript" src="jquery-ui-1.14.1/jquery-ui.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/2.3.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/2.3.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/2.3.1/time-elapsed-dhms.js"></script>
 
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script src="bootstrap/js/bootstrap.min.js"></script>
@@ -115,7 +115,11 @@
                     search: ""
                 },
                 columnDefs: [
-                    {type: 'time-elapsed-dhms', targets: 5}
+                    {
+                        targets: 4,
+                        visible: false
+                    },
+                    {type: 'time-elapsed-dhms', targets: 6}
                 ]
             })
             $("#manual-scenario-results").DataTable({
@@ -124,6 +128,12 @@
                     searchPlaceholder: "Filter",
                     search: ""
                 },
+                columnDefs: [
+                    {
+                        targets: 4,
+                        visible: false
+                    },
+                ]
             })
 
             // Results table
@@ -142,7 +152,11 @@
             $(".feature-coverage-table").DataTable({
                 searching: true,
                 paging: false,
-                info: false
+                info: false,
+                language: {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                },
             });
 
             $(".feature-coverage-table-with-pagination").DataTable({
@@ -152,7 +166,7 @@
                 language: {
                     searchPlaceholder: "Filter",
                     search: ""
-                }
+                },
             });
         });
     </script>
@@ -195,7 +209,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 05-12-2025 14:46:56</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-12-2025 15:12:33</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -283,48 +297,48 @@
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>Dec 05, 2025 14:41:09</td>
+                    <td>Dec 09, 2025 15:10:37</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>Dec 05, 2025 14:46:51</td>
+                    <td>Dec 09, 2025 15:12:29</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td> 5m 42s</td>
+                    <td> 1m 52s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-trophy"></i> Fastest Test
                     </td>
-                    <td>0ms</td>
+                    <td>16s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-skip-start"></i> Slowest
                         Test
                     </td>
-                    <td>0ms</td>
+                    <td> 1m 36s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
                     </td>
-                    <td>0ms</td>
+                    <td>56s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td>0ms</td>
+                    <td> 1m 52s</td>
                 </tr>
                 </tbody>
             </table>
@@ -335,6 +349,59 @@
                                             </div>
                                             <div class="container-fluid">
 
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                                            <h3>Test Failure Overview</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                                            <h4>Most Frequent Failures</h4>
+                                                            <table class="table" style="width:40vw;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="failure-color top-list-title">
+                                                                            <a href="de6f1221c376aacf2a535359d0f7eb11364d06387e1097f08977bd47cc9db3fe.html"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a> Multiple assertion errors</a>
+                                                                        </td>
+                                                                        <td><span
+                                                                                    class="badge failure-badge">1</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="error-color top-list-title">
+                                                                            <a href="23d921076cab3dfa3de405f68c108e3102c71370c26ee830ef993cf18e0d8ad9.html"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> Driver configuration error</a>
+                                                                        </td>
+                                                                        <td><span
+                                                                                    class="badge failure-badge">1</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-sm-12">
+                                                            <h4>Most Unstable Features</h4>
+                                                            <table class="table" style="width:40vw;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="failure-color top-list-title">
+                                                                            <a href="ff3a521a9bc88ac8f2f38678b1c3d095f7478217a61dbf1f38f74745b19f3e2f.html">Interacción Play Store</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="badge failure-badge">100%</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="failure-color top-list-title">
+                                                                            <a href="9c41b2f28bd1a558344540f8732a910df85cf8154b1d809860b027553b62e2f0.html">Navegación Web Mobile</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <span class="badge failure-badge">100%</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
                                             </div>
                                             <div class="container-fluid">
         <div class="row">
@@ -344,12 +411,12 @@
                         <div class="card-body">
                             <div>
                                     <a href="fe6865cb9380b25ccba2f61f32dd109ad1e4105c9a58de7db0e6ceb2e4c8000e.html">
-                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                    <span class="tag-badge badge" style="background-color:#fd938e; margin:1em;padding:4px;">
                                         <i class="bi bi-tag-fill"></i> App Store&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                                     <a href="a2a65dd52ca31b686c9aad4547fa08f3c85745ced8484b78d1fcf3ce17373b70.html">
-                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
                                         <i class="bi bi-tag-fill"></i> Web Mobile&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
@@ -378,7 +445,7 @@
                         <i class="bi bi-stopwatch"></i> Total
                         Duration
                     </td>
-                    <td> 5m 42s</td>
+                    <td> 1m 52s</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -388,7 +455,7 @@
                     <td>
                         <i class="bi bi-trophy"></i> Fastest Test
                     </td>
-                    <td>0ms</td>
+                    <td>16s</td>
                 </tr>
                 <tr scope="row">
                     <td>
@@ -399,30 +466,30 @@
                         <i class="bi bi-skip-start"></i> Slowest
                         Test
                     </td>
-                    <td>0ms</td>
+                    <td> 1m 36s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-flag-fill"></i> Tests Started
                     </td>
-                    <td>Dec 05, 2025 14:41:09</td>
+                    <td>Dec 09, 2025 15:10:37</td>
                     <td>
                         <i class="bi bi-stopwatch"></i> Average
                         Execution Time
                     </td>
-                    <td>0ms</td>
+                    <td>56s</td>
                 </tr>
                 <tr scope="row">
                     <td>
                         <i class="bi bi-stop-circle"></i> Tests
                         Finished
                     </td>
-                    <td>Dec 05, 2025 14:46:51</td>
+                    <td>Dec 09, 2025 15:12:29</td>
                     <td>
                         <i class="bi bi-stopwatch-fill"></i> Total
                         Execution Time
                     </td>
-                    <td>0ms</td>
+                    <td> 1m 52s</td>
                 </tr>
                 </tbody>
             </table>
@@ -431,8 +498,7 @@
 
                                                         <h3><i class="bi bi-gear"></i> Automated Scenarios</h3>
 
-                                                            <table class="scenario-result-table table"
-                                                                   id="scenario-results">
+                                                            <table class="scenario-result-table table" id="scenario-results" style="width:100%">
                                                                 <thead>
                                                                 <tr>
                                                                     <th>feature</th>
@@ -445,7 +511,7 @@
                                                                 </tr>
                                                                 </thead>
                                                                 <tbody>
-                                                                    <tr class="scenario-result SUCCESS">
+                                                                    <tr class="scenario-result FAILURE">
                                                                         <td>
                                                                                 <a href="#">Interacción Play Store</a>
                                                                         </td>
@@ -454,14 +520,14 @@
                                                                         </td>
                                                                         <td><span style="display:none"></span>
                                                                         </td>
-                                                                        <td>1</td>
-                                                                        <td data-order="1764963669">14:41:09</td>
-                                                                        <td></td>
-                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
-                                                                                    style="display:none">SUCCESS</span>
+                                                                        <td>3</td>
+                                                                        <td data-order="1765311037">15:10:37</td>
+                                                                        <td>16s 209ms</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon ' title='FAILURE'></i></a> <span
+                                                                                    style="display:none">FAILURE</span>
                                                                         </td>
                                                                     </tr>
-                                                                    <tr class="scenario-result SUCCESS">
+                                                                    <tr class="scenario-result ERROR">
                                                                         <td>
                                                                                 <a href="#">Navegación Web Mobile</a>
                                                                         </td>
@@ -470,11 +536,11 @@
                                                                         </td>
                                                                         <td><span style="display:none"></span>
                                                                         </td>
-                                                                        <td>1</td>
-                                                                        <td data-order="1764964011">14:46:51</td>
-                                                                        <td></td>
-                                                                        <td><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a> <span
-                                                                                    style="display:none">SUCCESS</span>
+                                                                        <td>3</td>
+                                                                        <td data-order="1765311053">15:10:53</td>
+                                                                        <td>1m 36s</td>
+                                                                        <td><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon ' title='ERROR'></i></a> <span
+                                                                                    style="display:none">ERROR</span>
                                                                         </td>
                                                                     </tr>
                                                                 </tbody>
@@ -500,12 +566,12 @@
                         <div class="card-body">
                             <div>
                                     <a href="fe6865cb9380b25ccba2f61f32dd109ad1e4105c9a58de7db0e6ceb2e4c8000e.html">
-                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                    <span class="tag-badge badge" style="background-color:#fd938e; margin:1em;padding:4px;">
                                         <i class="bi bi-tag-fill"></i> App Store&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
                                     <a href="a2a65dd52ca31b686c9aad4547fa08f3c85745ced8484b78d1fcf3ce17373b70.html">
-                                    <span class="tag-badge badge" style="background-color:#b0cf73; margin:1em;padding:4px;">
+                                    <span class="tag-badge badge" style="background-color:#fe6c2d; margin:1em;padding:4px;">
                                         <i class="bi bi-tag-fill"></i> Web Mobile&nbsp;&nbsp;&nbsp;1
                                     </span>
                                     </a>
@@ -532,7 +598,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12">
-            <span class="version">Serenity BDD version 4.0.30</span>
+            <span class="version">Serenity BDD version 4.3.2</span>
         </div>
     </div>
 </div>
@@ -560,7 +626,7 @@
             datasets: [{
                 label: 'Test Results',
                 fill: false,
-                data: [2,0,0,0,0,0,0,0],
+                data: [0,0,0,0,0,1,1,0],
                 backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                 borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                 borderWidth: 1,
@@ -611,7 +677,7 @@
                         ctx.font = fontSize + "em sans-serif";
                         ctx.textBaseline = "middle";
 
-                        var text = "100%"
+                        var text = " "
                         textX = 10 + Math.round((width - ctx.measureText(text).width) / 2);
                         textY = (height / 2) - 40;
 
@@ -656,7 +722,7 @@
             datasets: [
                 {
                     label: 'Automated',
-                    data: [2,0,0,0,0,0,0,0],
+                    data: [0,0,0,0,0,1,1,0],
                     backgroundColor: ['rgba(153,204,51,0.5)','rgba(165, 199, 238, 0.5)','rgba(168, 168, 168, 0.5)','rgba(238, 224, 152, 0.75)','rgba(255, 153, 102, 0.5)','rgba(255, 22, 49, 0.5)','rgba(255, 97, 8, 0.5)','rgba(255, 104, 255, 0.5)','rgba(83, 50, 168, 0.5)'],
                     borderColor: ['rgba(153,204,51,1)','rgba(165, 199, 238, 1)','rgba(168, 168, 168, 1)','rgba(238, 224, 152, 1)','rgba(255, 153, 102, 1)','rgba(255, 22, 49, 1)','rgba(255, 97, 8, 1)','rgba(255, 104, 255, 1)','rgba(83, 50, 168, 1)'],
                     borderWidth: 1
@@ -739,7 +805,7 @@
             datasets: [{
                 label: 'Number of tests per duration',
                 fill: false,
-                data: ['2','0','0','0','0','0','0','0'],
+                data: ['0','0','1','0','1','0','0','0'],
                 backgroundColor: 'rgba(83, 146, 255,0.5)',
                 borderColor: 'rgba(83, 146, 255, 1)',
             }]

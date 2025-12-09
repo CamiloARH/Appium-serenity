@@ -1,1 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Navegación Web Mobile" skipped="0" tests="1" time="0.0" timestamp="2025-12-05 02:46:51"><testcase name="Navegar en Serebii desde Chrome Mobile"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Navegación Web Mobile" skipped="0" tests="1" time="114.36" timestamp="2025-12-09 03:59:48"><testcase name="Navegar en Serebii desde Chrome Mobile"><error message="Could not instantiate class net.thucydides.core.webdriver.ProvidedDriver" type="net.thucydides.core.webdriver.DriverConfigurationError">Could not instantiate class net.thucydides.core.webdriver.ProvidedDriver</error><system-err>Could not instantiate class net.thucydides.core.webdriver.ProvidedDriver&#13;
+co.com.pragma.tasks.NavigateTo.performAs(NavigateTo.java:24)&#13;
+co.com.pragma.stepdefinitions.MobileSteps.navigateSerebii(MobileSteps.java:39)&#13;
+✽.ingresa a la pagina de serebii(classpath:features/serebii.feature:6)&#13;
+</system-err></testcase></testsuite>

@@ -10,8 +10,6 @@ import org.openqa.selenium.interactions.Sequence;
 import java.time.Duration;
 import java.util.Collections;
 
-// PATRÓN ADAPTER: Adapta la complejidad de PointerInput a un método simple "scroll"
-
 public class W3CActionAdapter {
 
     public static void scrollDown(Actor actor) {

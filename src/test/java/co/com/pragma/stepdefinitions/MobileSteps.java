@@ -37,6 +37,7 @@ public class MobileSteps {
         // Uso de Prototype (Clone) simulado: creamos una copia para asegurar inmutabilidad si fuera necesario
         MobileTestData currentData = testData.clone();
         OnStage.theActorInTheSpotlight().attemptsTo(NavigateTo.website(currentData));
+
     }
 
     @Then("deberia ver el home de la pagina")
