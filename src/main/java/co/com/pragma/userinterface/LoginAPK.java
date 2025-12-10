@@ -15,5 +15,5 @@ public class LoginAPK {
             .located(AppiumBy.accessibilityId("test-LOGIN"));
 
     public static final Target PRODUCT_TITLE = Target.the("Título de Productos")
-            .located(AppiumBy.xpath("//android.widget.TextView[@text='PRODUCTS']"));
+            .located(AppiumBy.accessibilityId("test-PRODUCTS"));
 }

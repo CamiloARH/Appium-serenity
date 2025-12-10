@@ -10,5 +10,7 @@ import org.junit.platform.suite.api.Suite;
 @IncludeEngines("cucumber")
 @SelectClasspathResource("/features/playstore.feature")
 @ConfigurationParameter(key = Constants.GLUE_PROPERTY_NAME, value = "co.com.pragma.stepdefinitions")
+@ConfigurationParameter(key = "environment", value = "local_app")
+
 public class PlayStoreAppRunner {
 }
