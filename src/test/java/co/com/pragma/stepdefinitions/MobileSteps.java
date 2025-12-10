@@ -2,6 +2,7 @@ package co.com.pragma.stepdefinitions;
 
 import co.com.pragma.models.MobileTestData;
 import co.com.pragma.questions.ValidateSite;
+import co.com.pragma.tasks.BuscarPokemon;
 import co.com.pragma.tasks.DownloadApp;
 import co.com.pragma.tasks.NavigateTo;
 import io.cucumber.java.Before;
@@ -12,6 +13,7 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class MobileSteps {
 
@@ -36,13 +38,15 @@ public class MobileSteps {
     public void navigateSerebii() {
         // Uso de Prototype (Clone) simulado: creamos una copia para asegurar inmutabilidad si fuera necesario
         MobileTestData currentData = testData.clone();
-        OnStage.theActorInTheSpotlight().attemptsTo(NavigateTo.website(currentData));
-
+        theActorInTheSpotlight().attemptsTo(NavigateTo.website(currentData));
+        theActorInTheSpotlight().attemptsTo(
+                BuscarPokemon.conNombre("pikachu")
+        );
     }
 
     @Then("deberia ver el home de la pagina")
     public void verifySerebii() {
-        OnStage.theActorInTheSpotlight().should(seeThat(ValidateSite.isLoaded()));
+        theActorInTheSpotlight().should(seeThat(ValidateSite.isLoaded()));
     }
 
     // --- TEST 2: APP PLAY STORE ---
@@ -53,7 +57,7 @@ public class MobileSteps {
 
     @When("busca la aplicacion {string} y la selecciona")
     public void searchApp(String appName) {
-        OnStage.theActorInTheSpotlight().attemptsTo(DownloadApp.named(appName));
+        theActorInTheSpotlight().attemptsTo(DownloadApp.named(appName));
     }
 
     @Then("deberia poder iniciar la descarga")
