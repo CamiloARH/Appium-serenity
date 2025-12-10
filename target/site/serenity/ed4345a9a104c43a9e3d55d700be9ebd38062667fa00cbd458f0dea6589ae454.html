@@ -147,7 +147,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-12-2025 15:10</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 10-12-2025 08:30</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -291,7 +291,7 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">013ms</span></td>
+                    <td width="100"><span class="top-level-step">301ms</span></td>
                 </tr>
                 <tr class="test-ERROR">
 
@@ -318,7 +318,7 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">ERROR</span></td>
-                    <td width="100"><span class="top-level-step">1m 36s</span></td>
+                    <td width="100"><span class="top-level-step">1m</span></td>
                 </tr>
                     <tr>
                         <td colspan="5">
@@ -343,7 +343,7 @@
                     </td>
 
                     <td width="130"><span class="nested-group-step">ERROR</span></td>
-                    <td width="100"><span class="nested-group-step">1m 36s</span></td>
+                    <td width="100"><span class="nested-group-step">58s 203ms</span></td>
                 </tr>
                     <tr class="test-ERROR">
                         <td width="40">&nbsp</td>
@@ -354,7 +354,7 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">net.thucydides.core.webdriver.DriverConfigurationError: Could not instantiate class net.thucydides.core.webdriver.ProvidedDriver</span>
+                    <span class="error-message error-message-title">org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection<br>from disconnected: Unable to receive message from renderer<br>  (Session info: chrome=133.0.6943.137)<br>Build info: version: &#39;4.38.0&#39;, revision: &#39;6b412e825c*&#39;<br>System info: os.name: &#39;Windows 11&#39;, os.arch: &#39;amd64&#39;, os.version: &#39;10.0&#39;, java.version: &#39;21.0.7&#39;<br>Driver info: io.appium.java_client.android.AndroidDriver<br>Command: [7aa93f18-f264-42e5-b538-eb4eaa6499d0, get {url=https://www.serebii.net/}]<br>Capabilities {appium:automationName: UiAutomator2, appium:chromedriverAutodownload: false, appium:chromedriverExecutable: C:\Estudio\qa-mobile-proyec..., appium:databaseEnabled: false, appium:desired: {appActivity: com.android.chrome/com.goog..., appPackage: com.android.chrome, automationName: UiAutomator2, browserName: Chrome, chromedriverAutodownload: false, chromedriverExecutable: C:\Estudio\qa-mobile-proyec..., deviceName: emulator-5554, newCommandTimeout: 300, platformName: ANDROID}, appium:deviceApiLevel: 36, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 480, appium:deviceScreenSize: 1344x2992, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 300, appium:pixelRatio: 3, appium:platformVersion: 16, appium:statBarHeight: 156, appium:takesScreenshot: true, appium:viewportRect: {height: 2836, left: 0, top: 156, width: 1344}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: Chrome, platformName: ANDROID}<br>Session ID: 7aa93f18-f264-42e5-b538-eb4eaa6499d0</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-3"
@@ -370,20 +370,13 @@
         <div class="collapse multi-collapse" id="stacktraceModal-3">
             <div class="card">
                 <div class="card-header">
-                    <h4>net.thucydides.core.webdriver.DriverConfigurationError </h4>
+                    <h4>org.openqa.selenium.NoSuchSessionException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>co.com.pragma.tasks.NavigateTo.performAs(NavigateTo.java:24)<br />co.com.pragma.stepdefinitions.MobileSteps.navigateSerebii(MobileSteps.java:39)<br />✽.ingresa a la pagina de serebii(classpath:features/serebii.feature:6)<br /></pre>
+                        <pre>io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)<br />co.com.pragma.tasks.NavigateTo.performAs(NavigateTo.java:24)<br />co.com.pragma.stepdefinitions.MobileSteps.navigateSerebii(MobileSteps.java:41)<br />✽.ingresa a la pagina de serebii(classpath:features/serebii.feature:6)<br /></pre>
                     </div>
 
-                    <h4>
-                        Caused by: net.thucydides.core.webdriver.DriverConfigurationError
-                    </h4>
-                    <div>
-                            <pre>After several attempts, could not instantiate new WebDriver instance of type class net.thucydides.core.webdriver.ProvidedDriver (Could not instantiate the custom webdriver provider of type mydriver). See below for more details.</pre>
-                        <pre>co.com.pragma.tasks.NavigateTo.performAs(NavigateTo.java :24)<br />co.com.pragma.stepdefinitions.MobileSteps.navigateSerebii(MobileSteps.java :39)<br />✽.ingresa a la pagina de serebii(classpath:features/serebii.feature :6)<br /></pre>
-                    </div>
                 </div>
             </div>
         </div>
@@ -419,7 +412,7 @@
             <tr class="test-ERROR">
                     <td colspan="2"></td>
                 <td width="130"><span class="top-level-step"><em>ERROR</em></span></td>
-                <td width="100"><span class="top-level-step"><em>96.23s</em></span></td>
+                <td width="100"><span class="top-level-step"><em>60.01s</em></span></td>
             </tr>
 
         </table>

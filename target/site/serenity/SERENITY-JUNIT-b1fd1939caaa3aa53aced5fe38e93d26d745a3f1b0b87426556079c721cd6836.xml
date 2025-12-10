@@ -4,7 +4,7 @@ Expected: an element that is visible&#13;
 Expected: an element that is visible&#13;
      but: no matching element found by [Caja de Búsqueda (Home) located with: Appiumid: com.google.android.finsky:id/search_bar_hint]&#13;
 co.com.pragma.tasks.DownloadApp.performAs(DownloadApp.java:23)&#13;
-co.com.pragma.stepdefinitions.MobileSteps.searchApp(MobileSteps.java:55)&#13;
+co.com.pragma.stepdefinitions.MobileStepsWeb.searchApp(MobileSteps.java:55)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
 worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
 </system-err></testcase></testsuite>

@@ -17,6 +17,6 @@ Capabilities {appium:automationName: UiAutomator2, appium:chromedriverAutodownlo
 Session ID: 7aa93f18-f264-42e5-b538-eb4eaa6499d0&#13;
 io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:243)&#13;
 co.com.pragma.tasks.NavigateTo.performAs(NavigateTo.java:24)&#13;
-co.com.pragma.stepdefinitions.MobileSteps.navigateSerebii(MobileSteps.java:41)&#13;
+co.com.pragma.stepdefinitions.MobileStepsWeb.navigateSerebii(MobileSteps.java:41)&#13;
 ✽.ingresa a la pagina de serebii(classpath:features/serebii.feature:6)&#13;
 </system-err></testcase></testsuite>

@@ -1,7 +1,7 @@
-Feature: Interacción Play Store
+Feature: Login en Swag Labs App
 
-  @AppStore
-  Scenario: Descargar Waze
-    Given que el usuario accede a la tienda de aplicaciones
-    When busca la aplicacion "Waze" y la selecciona
-    Then deberia poder iniciar la descarga
+  @NativeApp
+  Scenario: Login exitoso con usuario estándar
+    Given que el usuario abre la app de Swag Labs
+    When ingresa el usuario "standard_user" y clave "secret_sauce"
+    Then deberia ver la lista de productos
